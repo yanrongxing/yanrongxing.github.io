@@ -1,60 +1,105 @@
 ---
 layout: default
 ---
+# 个人信息
 
-# 严荣兴 - 智能合约工程师
+- **姓 名：** 严荣兴 
+- **工作年限：** 6年
+- **电子邮件：** [better_xing@163.com](mailto:better_xing@163.com)
+- **电话号码：** 13699132623
+- **Gihtub：** [https://github.com/yanrongxing/](https://github.com/yanrongxing/)
 
-Gihtub: [https://github.com/yanrongxing/](https://github.com/yanrongxing/)
+# 职业目标
 
-邮箱: [better_xing@163.com](mailto:better_xing@163.com)
+热衷于Golang、区块链开发的工程师，专注于构建高性能、可扩展和可维护的应用程序。致力于在创新的技术环境中解决复杂的问题。
 
-微信: Big-Serkis
+# 技能
 
-## 简介
+- **编程语言：** Golang, Java, Solidity
+- **Web2开发：** Go框架（如Gin、Gorm）, ProtoBuf、RESTful API设计
+- **Web3开发：** OpenZeppelin, Hardhat, Subgraph, wagmi
+- **数据存储：** MySQL, Redis, ElasticSearch
+- **微服务架构：** Docker, Kubernetes, Istio, go-kratos
+- **版本控制：** Git
+- **CI/CD：** Jenkins, GitLab
 
-*   毕业于江西环境工程职业学院·计算机应用技术(大专)
+# 工作经验
 
-*   从事互联⽹⼯作6年
+## 加密矿场Space X(未成立公司)，广州，2022-11 - 2023-12
 
-*   4年移动互联⽹开发经验
+**高级开发工程师**
 
-*   2018年开始涉⾜区块链
+- 负责链游项⽬的架构设计、编码工作
+- 负责nft交易市场的架构设计、编码工作
 
-*   ⽬前 Base 在⼴州，主要专注于 DeFi、GameFi产品研发
+## AAX交易所，广州，2019-2 - 2022-11
+
+**高级开发工程师**
+
+- 负责开发维护重构交易系统、撮合系统、行情系统
+- 负责设计开发自动交易系统
+
+## 深圳⼩⻥区块链有限公司，深圳，2018-7 - 2019-2
+
+**Java开发工程师**
+- 负责交易所钱包对接
+- 开发维护交易所系统
 
 
-## 技能
-### Web2
-*   服务器端：Java、Mysql、Redis、ElasticSearch、shell、docker
-*   前端：ReactJS、Vue、TailwindCss
+# 教育背景
 
-### Web3
-*   服务器端：Solidity、OpenZeppelin、Hardhat、Remix、Subgraph、Chainlink、IPFS、ENS
-*   前端：react-web3、web3.js、ethers.js、Apollo client、wagmi
+大专，计算机应用技术，江西环境工程职业学院，2015-7
 
-## ⼯作经历
-### ⼴州越⼭⽹络有限公司
-*   2021-11⾄今
-*   web3全栈⼯程师
-*   负责链游项⽬的架构设计，搭建nft交易市场
-
-### 某希公链
-*   2019-2⾄2021-4
-*   web3全栈⼯程师
-*   负责evm区块节点的搭建维护，搭建基于Blockscout的区块链资源浏览器
-
-### 深圳⼩⻥区块链有限公司
-*   2018-7⾄2019-2
-*   Java⼯程师
-*   负责交易所钱包对接，维护交易所系统代码
 
 ### ...
 
-## 项⽬经历
-### 战舰（GameFi）
-此项⽬模仿的是RadioCaca，游戏是中⼼化的，游戏内的逻辑我不参与，我只负责合约开发、部署、合约调⽤sdk，资产充提
+# 项⽬经历
+
+## AAX交易所
+Atom Asset Exchange ( [AAX](http://aax.com/) ) 是一家加密货币交易所，提供多种数字资产的现货交易服务。项目旨在建立高效、安全的交易平台，支持比特币、以太坊等多种数字资产的交易。
+
+### 我的角色:
+我担任了一名高级开发工程师的角色，主要负责现货交易系统、撮合引擎和行情系统的设计、选型、编码、维护和升级工作, 分配开发任务给团队小组成员
+
+### 技术栈
+- GoLang、Kafka、Redis、ProtoBuf、Grpc
+- Git、Jenkins、Kubernetes、Istio
+
+### 关键职责和技术亮点:
+- 随着用户不断增加,交易量也不断增加,原本的基于数据库的撮合引擎效率越来越低,于是领导团队重构了一个支持每秒处理10万单的撮合引擎, 主要是设计了一个完全基于内存数据撮合逻辑,另外还设计了撮合引擎分组的概念,将交易量较大的交易对(如btc/usdt,eth/usdt...)单独启动一个进程,交易量较小的则放在了一个进程内,将交易对隔离避免CPU和内存资源抢占
+- 设计和编写内存数据的持久化逻辑,保障了内存数据的安全性,并且从未出现过丢失数据的情况
+- 撮合引擎使用Kafka高性能消息队列接收新订单、输出撮合成功订单高效的完成数据闭环。
+- 后续也重构了行情系统使用Redis存储数据、在Lua脚本处理数据并使用Publish命令广播事件告知websocket服务主动向行情浏览器推送消息。
+- 使用protoc自动生成pb和grpc代码用于暴露和调用rpc服务,优化了代码结构，减少了每周团队代码审查时间，提高了开发效率。
+- 团队使用了Istio服务网格,使得开发团队可以轻松实时监控、追踪微服务和灰度发布,大大提高了系统的可观察性,有助于快速诊断和解决问题。
+- 使用jenkins、gitlab实现CICD,减少手动操作、提高代码质量、降低发布风险，并使团队更灵活地交付高质量的软件
+
+
+## AAX自动交易机器人
+此项目是AAX交易所的自动交易机器人,用户可以设置不同参数的网格策略自动交易不断的高买高卖套利,还提供机器人策略广场机为用户提供了业界领先的网格交易策略，用户能够便捷地复制这些策略的关键参数,快速开启自动交易。
+
+### 我的角色:
+在项目中，我担任了一名Golang开发工程师的角色，主要负责现货网格策略、相关接口的设计、编码、维护和升级工作
+
+### 技术栈
+- GoLang、Kafka、Redis
+- Git、Jenkins、Kubernetes
+
+### 关键职责和技术亮点:
+- 设计完全基于内存的撮合引擎,确保交易的快速、定序和准确执行。
+- 设计编写内存数据的持久化逻辑保障数据的安全性。
+- 撮合引擎部署在k8s上,现货管理后台每添加一个交易对将在k8s上创建一个容器,
+- 使用Kafka消息队列批量接收新订单、输出撮合成功订单高效的完成数据闭环。
+- 行情系统使用redis存储行情数据,保障了行情系统的高效和大量读取。
+- 行情系统使用redis的lua脚本处理数据并使用Publish命令广播事件告知websocket服务主动向行情浏览器推送消息。
+- 参与系统升级项目，不断通过优化撮合算法、分布式技术提升撮合引擎的响应速度,以达到每秒成千上万的交易量。
+
+
+### 加密矿场 Space X（[GameFi](https://cryptominespacexv2.netlify.app/)）
+Cryptomine Space X 是 BSC(币安链) 网络上的GameFi产品,用户在购买代币就可以进入网站玩游戏赚取利润
+
 #### 技术栈
-solidity、openzeepelin、hardhat、ethers.js、blockNative、webhook、java
+solidity、openzeepelin、hardhat、ethers.js、blockNative、webhook、go
 #### 游戏逻辑
 *   ⽤⼾在Pancake购买官⽅代币(ERC20)。
 *   将代币充值到游戏内，对战需要消耗代币，对战后会产出战舰碎⽚(ERC1155)，最后可以消耗战舰碎⽚铸造NFT盲盒(ERC721)。
@@ -64,6 +109,7 @@ solidity、openzeepelin、hardhat、ethers.js、blockNative、webhook、java
 *   ERC1155：主要⽤于存储⽤于存储多个同质化装备：碎⽚、砖⽯、药⽔
 *   ERC721：基本的NFT合约，额外增加了权限控制mint函数,NFT的元数据存储于ipfs。合约是可升级合约，使⽤的是透明代理模式。
 *   FundChannel：资⾦渠道合约，负责游戏内的资产充提。充值时需要⽤⼾授权资产给该合约转账，提币时需要游戏服务器签名，合约对参数进⾏验签，验证通过才可以提币通过。游戏是通过BlockNative的webhook来订阅充值提币状态的。
+
 
 ### 战舰NFT交易市场（DeFi）
 
@@ -86,15 +132,4 @@ solidity、openzeepelin、hardhat、ethers.js、subgraph、assemblyscript、node
 - ERC721：nft资产，⽤于流通交易
 - ERC1155：装备资产，⽤于流通交易
 
-### 某希公链
-此项⽬是⼀个公链项⽬，⽤⼾20w+，资⾦体量10亿+rmb。项⽬背景是打造全球⽀付系统，其实就是⼀个以太坊搭建的私链另外单独开发了⼀
-个app，app有个团购功能，质押功能，c2c。我这边主要负责公链搭建和区块链浏览器的部署
-#### 技术栈
-evm、blockscout、geth、bootnode
-#### 公链
-该条链有4个节点，1个是bootnode⽤于组织关联另外3个节点，其中1个节点对外提供rpc
-#### 区块链浏览器
-区块链浏览器是基于开源项⽬blockscout搭建的，其实当时开源的区块链浏览器挺多的，但是⼤部分都只⽀持查看区块、交易、地址信息，
-但是blockscout⽀持的功能相当完备，它⼏乎和ethscan功能差不多，能够查看合约代码、地址的代币、地址的代币流⽔
 
-### …
